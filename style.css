@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+#logo {
+    width: 10rem;
+}
+.navbar {
+    display: flex;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+
+    
+}
+
+.nav-list {
+    text-align: center;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5rem;
+    margin-right: 13rem;
+}
+
+.nav-list li a {
+    padding: 2rem;
+    font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.nav-list li a.active {
+    color: #7b27da;
+}
+
+.nav-list li a:hover {
+    color:#7b27da;
+    font-weight: 500;
+    transition: 500ms;
+    font-size: 1.35rem;
+
+}
+
+
+
+.boxContainer {
+    margin: 40px;
+    position: relative;
+    border: 4px solid black;
+    padding: 8px 10px;
+    border-radius: 50px;
+    width: 250px;
+    height: 40px;
+}
+
+.elementsContainer {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.search {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0px 3px;
+    font-size: 10px;
+    color: #424242;
+    font-weight: 500;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.searchIcon {
+    font-size: 26;
+    color: black;
+}
+
+.shoppingCart {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cart {
+    font-weight: 500;
+}
+
+.wallpaper {
+    text-align: center;
+    background: #17102e;
+    margin-top: 20px;
+}
+
+.wallpaper img {
+    width: 100%;
+    height: 450px;
+    object-fit: none;
+    object-position: center;
+}
+
+.heading-1 {
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+.separator {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;;
+    color: rgb(23, 16, 46);
+    box-sizing: inherit;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.separator::before {
+    content: "";
+    display: block;
+    border: 2px solid #7b27da;
+}
+
+.cardContainer {
+    margin-top: 20px;
+    display: flex;
+}
+
+.card {
+    width: 350px;
+    height: auto;
+    margin: 10px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+    text-align: center;
+
+}
+
+.card-image {
+    height: 300px;
+    margin-bottom: 15px;
+
+}
+
+.card-image img {
+    object-position: center;
+    width: 90%;
+}
+

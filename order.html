@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+    href="//db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold"
+    rel="stylesheet"
+    type="text/css"
+  />
+    <link href="order.css" rel="stylesheets">
+    <script src="order.js" async></script>
+    <title>Final Project</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img id="logo" src="./Images/logo2.png" alt="logo"></a>
+        
+        <div class="nav-list">
+            <li><a class="active">New Arrivals</a></li>
+            <li><a>Women</a></li>
+            <li><a>Men</a></li>
+            <li><a>SALE!</a></li>
+        </div>
+
+        
+        <div class="boxContainer">
+            <table class="elementsContainer">
+                <tr>
+                    <td>
+                        <input type="text" placeholder="search"
+                        class="search">
+                    </td>
+                    <td>
+                        <a href="#"><box-icon class="searchIcon"name='search' size="md">search</box-icon></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="shoppingCart">
+            <box-icon class="cart" name='shopping-bag' size="md" ></box-icon>
+        </div>
+    </div>
+
+    <div class="wallpaper">
+        <img src="/Images/wallpaper.png" alt="wallpaper">
+    </div>
+
+    <div class="heading-1">LETS TIE UP SOME LOOSE ENDS</div>
+
+    <hr aria-hidden="true" class="separator"> </hr>
+
+    <section id="orderSection">
+        <form id="cart" name="cart" action="co_credit.html" method="get">
+          
+          <table id="cartTable">
+             <caption>Shopping Cart</caption>
+             <tr>
+                <td>
+                   <label>EC115 Pump Espresso Machine ($249.95)</label>
+                   <input type="hidden" name="modelCost" id="modelCost" value="249.95" />
+                   <input type="hidden" id="modelName" name="modelName" value="ECC115 Pump Espresso Machine ($249.95)" />
+                </td>
+                <td class="rightA">
+                   <label for="modelQty">Pick Your Size</label>
+                   <select name="modelQty" id="modelQty">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option><option value="3">3</option>
+                      <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                      <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                      <option value="10">10</option>
+                   </select>   
+                </td>                 
+             </tr>
+             <tr>
+                <td colspan="2"> 
+                   <input type="hidden" id="shippingType" name="shippingType" />                
+                   <fieldset>
+                      <legend>Shipping Speed</legend>
+                      <label><input type="radio" id="ground" name="shipping" value="12.95" checked/> Standard ($12.95)</label> 
+                      <label><input type="radio" id="day_2" name="shipping" value="19.95" /> 2-Day Shipping ($19.95)</label>   
+                      <label><input type="radio" id="overnight" name="shipping" value="28.50" /> Overnight Shipping ($28.50)</label>
+                   </fieldset>
+                </td>
+             </tr>        
+  
+             <tr>
+                <td colspan="2" class="rightA">TOTAL</td>
+                <td>
+                   <input type="text" name="cartTotal" id="cartTotal" size="10" readonly />
+               </td>
+             </tr>
+          </table>
+          <input type="submit" id="buttonAdd" value="Checkout" />
+  
+        </form>
+     </section>
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

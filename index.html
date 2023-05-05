@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+    href="//db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold"
+    rel="stylesheet"
+    type="text/css"
+  />
+    <script src="order.js" async></script>
+    <title>Final Project</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img id="logo" src="./Images/logo2.png" alt="logo"></a>
+        
+        <div class="nav-list">
+            <li><a class="active">New Arrivals</a></li>
+            <li><a>Women</a></li>
+            <li><a>Men</a></li>
+            <li><a>SALE!</a></li>
+        </div>
+
+        
+        <div class="boxContainer">
+            <table class="elementsContainer">
+                <tr>
+                    <td>
+                        <input type="text" placeholder="search"
+                        class="search">
+                    </td>
+                    <td>
+                        <a href="#"><box-icon class="searchIcon"name='search' size="md">search</box-icon></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="shoppingCart">
+            <box-icon class="cart" name='shopping-bag' size="md" ></box-icon>
+        </div>
+    </div>
+
+    <div class="wallpaper">
+        <img src="/Images/wallpaper.png" alt="wallpaper">
+    </div>
+
+    <div class="heading-1">FIND YOUR SOLE-MATE<br>NEW MATCHES FOR YOU!</div>
+
+    <hr aria-hidden="true" class="separator"> </hr>
+
+    <section class="cardContainer">
+        <div class="card">
+            <div class="card-image"><img src="/Images/1.png" alt="shoe1"></div>
+            <h2>FIND YOUR ZEN</h2>
+            <p>OPEN TOED HIGH-TOPS<br>$95.00</p>
+            <form id="orderForm" name="orderForm" method="get" action="order.html">
+                <input type="submit" id="buyShoe" value="Buy Now">
+            </form>
+        </div>
+        <div class="card">
+            <div class="card-image"><img src="/Images/2.png" alt="shoe2"></div>
+            <h2>BE SENSATIONAL</h2>
+            <p>HIGH STYLE HIGH-TOPS<br>$150.00</p>
+            <form id="orderForm" name="orderForm" method="get" action="order.html">
+                <input type="submit" id="buyShoe" value="Buy Now">
+            </form>
+        </div>
+        <div class="card">
+            <div class="card-image"><img src="/Images/3.png" alt="shoe3"></div>
+            <h2>FIND YOUR PATH</h2>
+            <p>LOW-TOP RUNNERS<br>$110.00</p>
+            <form id="orderForm" name="orderForm" method="get" action="order.html">
+                <input type="submit" id="buyShoe" value="Buy Now">
+            </form>
+        </div>
+    </section>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

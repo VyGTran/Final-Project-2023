@@ -1,0 +1,48 @@
+section#orderSection {
+    -webkit-flex: 1 1 200px;
+    flex: 1 1 200px;
+    margin: 20px;
+ }
+    
+ /* Order Table Styles */
+ 
+ table#cartTable {
+    margin: 15px;
+    width: 95%;
+    border-collapse: collapse;
+ }
+ 
+ form#cart fieldset {
+    border: none;
+    margin-left: -10px;
+ }
+ 
+ form#cart input[type="text"] {
+    background-color: rgba(240, 233, 222, 0.5);
+ }
+ 
+ table#cartTable caption {
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-align: left;
+    caption-side: top;
+    margin-bottom: 20px;
+ }
+ 
+ 
+ table#cartTable td {
+    height: 30px;
+    vertical-align: top;
+ }
+ 
+ 
+ form#cart input[type="text"] {
+    color: rgb(101, 101, 101);
+ }
+ 
+ form#cart select {
+    display: inline-block;
+    margin-left: 10px;
+    color: rgb(101, 101, 101);
+ }
