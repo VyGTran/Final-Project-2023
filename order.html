@@ -11,7 +11,7 @@
     rel="stylesheet"
     type="text/css"
   />
-    <link href="order.css" rel="stylesheets">
+    <link href="order.css" rel="stylesheet">
     <script src="order.js" async></script>
     <title>Final Project</title>
 </head>
@@ -52,46 +52,73 @@
 
     <div class="heading-1">LETS TIE UP SOME LOOSE ENDS</div>
 
-    <hr aria-hidden="true" class="separator"> </hr>
+    <hr aria-hidden="true" class="separator">
 
     <section id="orderSection">
         <form id="cart" name="cart" action="co_credit.html" method="get">
-          
-          <table id="cartTable">
+            <table class="cartTable" id="cartTable">
              <caption>Shopping Cart</caption>
              <tr>
                 <td>
-                   <label>EC115 Pump Espresso Machine ($249.95)</label>
-                   <input type="hidden" name="modelCost" id="modelCost" value="249.95" />
-                   <input type="hidden" id="modelName" name="modelName" value="ECC115 Pump Espresso Machine ($249.95)" />
+                    <label for="shoe">Shoe</label>
+                    <select name="shoe" id="shoe">
+                        <option value="95.00">Open Toed High-Tops ($95.00)</option> 
+                        <option value="150.00">High Style High-Tops($150.00)</option> 
+                        <option value="110.00">Low-Top Runners ($110.00)</option> 
+                    </select>
+                    <input type="hidden" id="shoeName" name="shoeName"/>
                 </td>
-                <td class="rightA">
-                   <label for="modelQty">Pick Your Size</label>
-                   <select name="modelQty" id="modelQty">
-                      <option value="1" selected>1</option>
-                      <option value="2">2</option><option value="3">3</option>
-                      <option value="4">4</option><option value="5">5</option><option value="6">6</option>
-                      <option value="7">7</option><option value="8">8</option><option value="9">9</option>
-                      <option value="10">10</option>
-                   </select>   
-                </td>                 
+                <td>
+                    <input type="text" name="initialCost" id="initialCost" size="10" readonly/>
+                </td>
+             </tr>
+
+             <tr>
+                <td>
+                    <label for="size">Pick Your Size</label>
+                    <select name="size" id="size">
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option selected>10</option>
+                        <option>11</option>
+                    </select>
+                </td>
+             </tr>
+
+             <tr>
+                <td>
+                    <label for="insurance">Insurance <em>($20 per year)</em></label>
+                    <select name="insurance" id="insurance">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" name="insuranceCost" id="insuranceCost" size="10" readonly/>
+                </td>
              </tr>
              <tr>
-                <td colspan="2"> 
+                <td> 
                    <input type="hidden" id="shippingType" name="shippingType" />                
-                   <fieldset>
-                      <legend>Shipping Speed</legend>
+                      <label>Shipping Speed</label>
                       <label><input type="radio" id="ground" name="shipping" value="12.95" checked/> Standard ($12.95)</label> 
                       <label><input type="radio" id="day_2" name="shipping" value="19.95" /> 2-Day Shipping ($19.95)</label>   
                       <label><input type="radio" id="overnight" name="shipping" value="28.50" /> Overnight Shipping ($28.50)</label>
-                   </fieldset>
                 </td>
-             </tr>        
+
+                <td>
+                    <input type="text" name="protectionCost" id="protectionCost" size="10" readonly />
+                </td>
+             </tr>
   
              <tr>
                 <td colspan="2" class="rightA">TOTAL</td>
                 <td>
-                   <input type="text" name="cartTotal" id="cartTotal" size="10" readonly />
+                   <input type="text" name="totalCost" id="totalCost" size="10" readonly />
                </td>
              </tr>
           </table>

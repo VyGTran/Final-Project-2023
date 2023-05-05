@@ -146,12 +146,12 @@ body {
 }
 
 .card {
-    width: 350px;
+    width: 300px;
     height: auto;
     margin: 10px;
     box-shadow: 0 1px 3px rgb(0 0 0 / 50%);
     text-align: center;
-
+    padding: 20px
 }
 
 .card-image {
@@ -165,3 +165,8 @@ body {
     width: 90%;
 }
 
+.innerCardContainer {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
