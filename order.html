@@ -20,7 +20,7 @@
         <a href="index.html"><img id="logo" src="./Images/logo2.png" alt="logo"></a>
         
         <div class="nav-list">
-            <li><a class="active">New Arrivals</a></li>
+            <li><a href="index.html" class="active">New Arrivals</a></li>
             <li><a>Women</a></li>
             <li><a>Men</a></li>
             <li><a>SALE!</a></li>
@@ -42,7 +42,7 @@
         </div>
 
         <div class="shoppingCart">
-            <box-icon class="cart" name='shopping-bag' size="md" ></box-icon>
+            <a href="order.html"> <box-icon class="cart" name='shopping-bag' size="md" ></box-icon></a>
         </div>
     </div>
 
@@ -55,10 +55,12 @@
     <hr aria-hidden="true" class="separator">
 
     <section id="orderSection">
-        <form id="cart" name="cart" action="co_credit.html" method="get">
+        <form id="orderForm" name="orderForm" action="co_credit.html" method="get">
             <table class="cartTable" id="cartTable">
              <caption>Shopping Cart</caption>
-             <tr>
+
+
+             <tr class="shoeType">
                 <td>
                     <label for="shoe">Shoe</label>
                     <select name="shoe" id="shoe">
@@ -66,63 +68,72 @@
                         <option value="150.00">High Style High-Tops($150.00)</option> 
                         <option value="110.00">Low-Top Runners ($110.00)</option> 
                     </select>
-                    <input type="hidden" id="shoeName" name="shoeName"/>
                 </td>
                 <td>
                     <input type="text" name="initialCost" id="initialCost" size="10" readonly/>
                 </td>
              </tr>
 
-             <tr>
+             <tr class="shoeSize">
                 <td>
                     <label for="size">Pick Your Size</label>
                     <select name="size" id="size">
                         <option>7</option>
                         <option>8</option>
                         <option>9</option>
-                        <option selected>10</option>
+                        <option>10</option>
                         <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
                     </select>
                 </td>
              </tr>
 
-             <tr>
+             <tr class="insurance">
                 <td>
                     <label for="insurance">Insurance <em>($20 per year)</em></label>
                     <select name="insurance" id="insurance">
-                        <option value="1" selected>1</option>
+                        <option value="0" selected>0</option>
+                        <option value="1" >1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
                     </select>
                 </td>
                 <td>
                     <input type="text" name="insuranceCost" id="insuranceCost" size="10" readonly/>
                 </td>
              </tr>
-             <tr>
-                <td> 
-                   <input type="hidden" id="shippingType" name="shippingType" />                
+
+             <tr class="shippingType">
+                <td class="shipping"> 
                       <label>Shipping Speed</label>
-                      <label><input type="radio" id="ground" name="shipping" value="12.95" checked/> Standard ($12.95)</label> 
-                      <label><input type="radio" id="day_2" name="shipping" value="19.95" /> 2-Day Shipping ($19.95)</label>   
-                      <label><input type="radio" id="overnight" name="shipping" value="28.50" /> Overnight Shipping ($28.50)</label>
+                      <ul>
+                        <li><input type="radio" id="ground" name="shipping" value="0" checked/> Standard (No Charge)</li> 
+                        <li><input type="radio" id="day_2" name="shipping" value="25" /> 2-Day Shipping ($25)</li>   
+                        <li><input type="radio" id="overnight" name="shipping" value="60" /> Overnight Shipping ($60)</li>
+                    </ul>
                 </td>
 
                 <td>
-                    <input type="text" name="protectionCost" id="protectionCost" size="10" readonly />
+                    <input type="text" name="shippingCost" id="shippingCost" size="10" readonly />
                 </td>
              </tr>
   
-             <tr>
-                <td colspan="2" class="rightA">TOTAL</td>
+             <tr class="total">
+                <td>
+                    <label>TOTAL</label>
+                </td>
                 <td>
                    <input type="text" name="totalCost" id="totalCost" size="10" readonly />
                </td>
              </tr>
+
           </table>
-          <input type="submit" id="buttonAdd" value="Checkout" />
+
+          <input type="submit" class="btn check-out" id="buttonAdd" value="Checkout" />
   
         </form>
      </section>

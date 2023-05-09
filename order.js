@@ -2,14 +2,12 @@
 
 window.addEventListener("load", function() {
     var orderForm = document.forms.orderForm;
-    orderForm.elements.shoe.focus();
-
     calcOrder();
 
     orderForm.elements.shoe.onchange = calcOrder;
     orderForm.elements.insurance.onchange = calcOrder;
 
-    var shippingType = document.querySelectorAll ('input[name="shippingType"]');
+    var shippingType = document.querySelectorAll ('input[name="shipping"]');
     for (var i = 0; i < shippingType.length; i++) {
         shippingType[i].onclick = calcOrder;
     }
@@ -27,16 +25,15 @@ function calcOrder() {
     orderForm.elements.initialCost.value = formatNumber(initialCost)
 
     var iCost = insurance * 20;
-    orderForm.elements.iCost.value = formatUSCurrency(iCost, 2);
+    orderForm.elements.insuranceCost.value = formatNumber(iCost);
 
-    var sCost = document.querySelector('input[name="shippingType"]:checked').value;
-    orderForm.elements.sCost.value = formatUSCurrency(sCost, 2);
+    var sCost = document.querySelector('input[name="shipping"]:checked').value;
+    orderForm.elements.shippingCost.value = formatNumber(sCost);
 
-    var totalCost = mCost + iCost + sCost;
-    orderForm.elements.totalCost.value = formatUSCurrency(totalCost), 2;
+    var totalCost = (+initialCost) + (+iCost) + (+sCost);
+    orderForm.elements.totalCost.value = formatUSCurrency(totalCost);
 
-    orderForm.elements.sh
-}
+};
 
 function formatNumber(val, decimals) {
    return val.toLocaleString(undefined, {minimumFractionDigits: decimals, 

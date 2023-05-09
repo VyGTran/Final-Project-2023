@@ -1,11 +1,47 @@
-.ordersection {
+
+
+.cartTable  * {
+    padding: 7px;
+}
+.orderSection {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 30px;
 }
 
 table.cartTable {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    border-collapse: collapse;
+}
+
+.cartTable caption {
+    font-size: 35px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.cartTable label {
+    font-size: 25px;
+}
+
+.shoeType td {
+}
+
+.shoeSize td {
+    border-bottom: 3px solid #7b27da;
+
+}
+
+.total td {
+    border-bottom: 7px double #7b27da;
+    border-top: 7px double #7b27da;
+}
+
+.check-out {
+    float: right;
+    margin-right: 275px;
+    width: 170px;
 }
